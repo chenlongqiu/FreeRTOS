@@ -136,7 +136,7 @@
  *
  * Defining configTICK_TYPE_WIDTH_IN_BITS as TICK_TYPE_WIDTH_64_BITS causes
  * TickType_t to be defined (typedef'ed) as an unsigned 64-bit type. */
-#define configTICK_TYPE_WIDTH_IN_BITS              TICK_TYPE_WIDTH_64_BITS
+#define configTICK_TYPE_WIDTH_IN_BITS              TICK_TYPE_WIDTH_32_BITS
 
 /* Set configIDLE_SHOULD_YIELD to 1 to have the Idle task yield to an
  * application task if there is an Idle priority (priority 0) application task
@@ -273,7 +273,7 @@
  * memory in the build.  Set to 0 to exclude the ability to create statically
  * allocated objects from the build.  Defaults to 0 if left undefined.  See
  * https://www.freertos.org/Static_Vs_Dynamic_Memory_Allocation.html. */
-#define configSUPPORT_STATIC_ALLOCATION              1
+#define configSUPPORT_STATIC_ALLOCATION              0
 
 /* Set configSUPPORT_DYNAMIC_ALLOCATION to 1 to include FreeRTOS API functions
  * that create FreeRTOS objects (tasks, queues, etc.) using dynamically
@@ -362,7 +362,7 @@
  * configCHECK_FOR_STACK_OVERFLOW is set to 1. See
  * https://www.freertos.org/Stacks-and-stack-overflow-checking.html  Defaults to
  * 0 if left undefined. */
-#define configCHECK_FOR_STACK_OVERFLOW        2
+#define configCHECK_FOR_STACK_OVERFLOW        0
 
 /******************************************************************************/
 /* Run time and task stats gathering related definitions. *********************/
@@ -573,7 +573,7 @@
  * respectively. The application can provide it's own implementation of
  * vApplicationGetIdleTaskMemory() and vApplicationGetTimerTaskMemory() by
  * setting configKERNEL_PROVIDED_STATIC_MEMORY to 0 or leaving it undefined. */
-#define configKERNEL_PROVIDED_STATIC_MEMORY    1
+#define configKERNEL_PROVIDED_STATIC_MEMORY    0
 
 /******************************************************************************/
 /* ARMv8-M port Specific Configuration definitions. ***************************/
@@ -583,18 +583,18 @@
  * to enable the TrustZone support in FreeRTOS ARMv8-M ports which allows the
  * non-secure FreeRTOS tasks to call the (non-secure callable) functions
  * exported from secure side. */
-#define configENABLE_TRUSTZONE            1
+#define configENABLE_TRUSTZONE            0
 
 /* If the application writer does not want to use TrustZone, but the hardware
  * does not support disabling TrustZone then the entire application (including
  * the FreeRTOS scheduler) can run on the secure side without ever branching to
  * the non-secure side. To do that, in addition to setting
  * configENABLE_TRUSTZONE to 0, also set configRUN_FREERTOS_SECURE_ONLY to 1. */
-#define configRUN_FREERTOS_SECURE_ONLY    1
+#define configRUN_FREERTOS_SECURE_ONLY    0
 
 /* Set configENABLE_MPU to 1 to enable the Memory Protection Unit (MPU), or 0
  * to leave the Memory Protection Unit disabled. */
-#define configENABLE_MPU                  1
+#define configENABLE_MPU                  0
 
 /* Set configENABLE_FPU to 1 to enable the Floating Point Unit (FPU), or 0
  * to leave the Floating Point Unit disabled. */
@@ -606,7 +606,7 @@
  * (MVE) is available only on these architectures. configENABLE_MVE must be left
  * undefined, or defined to 0 for the Cortex-M23,Cortex-M33 and Cortex-M35P
  * ports. */
-#define configENABLE_MVE                  1
+#define configENABLE_MVE                  0
 
 /******************************************************************************/
 /* ARMv7-M and ARMv8-M port Specific Configuration definitions. ***************/

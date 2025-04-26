@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32U575xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32U5xx_HAL_Driver/Inc;../Drivers/STM32U5xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32U5xx/Include;../Drivers/CMSIS/Include;..\..\FreeRTOS_stm32;..\modules\FreeRTOS-Kernel\include;..\modules\FreeRTOS-Kernel\portable\GCC\ARM_CM33_NTZ\non_secure</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32U5xx_HAL_Driver/Inc;../Drivers/STM32U5xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32U5xx/Include;../Drivers/CMSIS/Include;../../FreeRTOS_stm32;../modules/FreeRTOS-Kernel/include;../modules/FreeRTOS-Kernel/portable/GCC/ARM_CM33_NTZ/non_secure</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
